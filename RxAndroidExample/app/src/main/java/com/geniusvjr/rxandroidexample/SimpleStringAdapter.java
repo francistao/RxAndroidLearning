@@ -14,7 +14,8 @@ import java.util.List;
 /**
  * Created by dream on 16/4/12.
  */
-public class SimpleStringAdapter extends RecyclerView.Adapter<SimpleStringAdapter.ViewHolder>{
+
+public class SimpleStringAdapter extends RecyclerView.Adapter<SimpleStringAdapter.ViewHolder> {
 
     private final Context mContext;
     private final List<String> mStrings = new ArrayList<>();
@@ -23,8 +24,7 @@ public class SimpleStringAdapter extends RecyclerView.Adapter<SimpleStringAdapte
         this.mContext = mContext;
     }
 
-    public void setString(List<String> newString)
-    {
+    public void setString(List<String> newString) {
         mStrings.clear();
         mStrings.addAll(newString);
         notifyDataSetChanged();
@@ -37,14 +37,13 @@ public class SimpleStringAdapter extends RecyclerView.Adapter<SimpleStringAdapte
     }
 
 
-
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
         holder.mColorDisplay.setText(mStrings.get(position));
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(mContext,mStrings.get(position), Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, mStrings.get(position), Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -54,8 +53,7 @@ public class SimpleStringAdapter extends RecyclerView.Adapter<SimpleStringAdapte
         return mStrings.size();
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder
-    {
+    public static class ViewHolder extends RecyclerView.ViewHolder {
 
         public final TextView mColorDisplay;
 

@@ -41,6 +41,21 @@ public class ExampleListActivity extends AppCompatActivity {
                 Example1Activity.class,
                 "Example 1: Simple Color List"
         ));
+        exampleActivityAndNames.add(new ExampleActivityAndName(
+                Example2Activity.class,
+                "Example 2: Favorite Tv Shows"));
+        exampleActivityAndNames.add(new ExampleActivityAndName(
+                Example3Activity.class,
+                "Example 3: Improved Favorite Tv Shows"));
+        exampleActivityAndNames.add(new ExampleActivityAndName(
+                Example4Activity.class,
+                "Example 4: Button Counter"));
+        exampleActivityAndNames.add(new ExampleActivityAndName(
+                Example5Activity.class,
+                "Example 5: Value Display"));
+        exampleActivityAndNames.add(new ExampleActivityAndName(
+                Example6Activity.class,
+                "Example 6: City Search"));
         return exampleActivityAndNames;
     }
 }
